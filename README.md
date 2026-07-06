@@ -18,9 +18,21 @@
 
 ## 📦 安装教程 (Installation)
 
-### 方法一：直接 Clone 到个人 Skill 配置目录（推荐）
+### 方法一：🤖 给 AI Agent 的一键自动安装（推荐直接发送给 Agent）
 
-打开终端，将本仓库克隆至你的 Antigravity Skill 全局配置目录下：
+只需复制以下提示词发送给你的 AI Agent（如 Antigravity / Agentic Coding Assistant），Agent 将自动打开终端进行克隆与配置：
+
+> 💬 **发送给 Agent 的提示词：**  
+> *"请帮我在本地安装 `paper-reporter` skill，仓库地址为：https://github.com/luxiaogen/paper-reporter-skill.git 。请在终端中运行以下命令完成安装："*  
+> ```bash
+> mkdir -p ~/.gemini/config/skills && cd ~/.gemini/config/skills && git clone https://github.com/luxiaogen/paper-reporter-skill.git paper-reporter
+> ```
+
+---
+
+### 方法二：手动 Clone 到个人 Skill 配置目录
+
+打开终端，直接将本仓库克隆至你的 Antigravity Skill 全局配置目录下：
 
 ```bash
 mkdir -p ~/.gemini/config/skills
@@ -28,9 +40,11 @@ cd ~/.gemini/config/skills
 git clone https://github.com/luxiaogen/paper-reporter-skill.git paper-reporter
 ```
 
-### 方法二：手动安装
+---
 
-1. 下载本仓库中的 `SKILL.md` 文件。
+### 方法三：手动下载配置文件
+
+1. 下载本仓库中的 [SKILL.md](https://raw.githubusercontent.com/luxiaogen/paper-reporter-skill/main/SKILL.md) 配置文件。
 2. 在你的配置路径 `~/.gemini/config/skills/` 下新建 `paper-reporter` 文件夹。
 3. 将 `SKILL.md` 放入该文件夹中即可。
 
@@ -38,7 +52,7 @@ git clone https://github.com/luxiaogen/paper-reporter-skill.git paper-reporter
 
 ## 🚀 使用方法与触发词 (Usage)
 
-在与 Agent 对话时，只需提及以下任意关键词即可自动触发“论文汇报助手”技能：
+安装完成后，在与 Agent 对话时，只需提及以下任意关键词即可自动触发“论文汇报助手”技能：
 
 - “帮我梳理这篇论文，准备组会汇报”
 - “论文汇报助手”
