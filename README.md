@@ -81,12 +81,11 @@ git clone https://github.com/luxiaogen/paper-reporter-skill.git paper-reporter
 
 完成引导讨论后，助手将生成如下结构的汇报大纲：
 
-```markdown
 # 【组会汇报大纲】论文名称 / 主题
 
 ## 1. 核心问题与解决方案 (Core Problem & Solution)
 - **核心问题**：现有模型在遮挡场景下特征易丢失、匹配鲁棒性差。
-- **总体方案**：提出了包含遮挡感知注意力 (OAM) 与双向匈牙利匹配 (BHM) 的端到端框架。
+- **总体方案**：提出了包含遮挡感知注意力 (OAM) 与双向匈牙利匹配 (BHM) 的端到端目标检测框架。
 
 ## 2. 背景与问题切入 (Introduction)
 - **具体痛点**：轻度遮挡即导致边界框漂移（定位精度下降 15%）。
@@ -98,7 +97,7 @@ git clone https://github.com/luxiaogen/paper-reporter-skill.git paper-reporter
   - *设计初衷*：抑止掩码区域的高频噪声。
   - *具体解决*：降低遮挡像素在特征图上的权重。
 - **关键公式原理**：
-  \[ \mathcal{L}_{OAM} = -\sum y \log(\sigma(W \cdot F)) \]
+  $$\mathcal{L}_{OAM} = -\sum y \log(\sigma(W \cdot F))$$
 
 ## 4. 实验结果与消融分析 (Experiments)
 - **最佳组件**：OAM 模块带来最大的性能提升（+4.2% mAP）。
@@ -107,7 +106,6 @@ git clone https://github.com/luxiaogen/paper-reporter-skill.git paper-reporter
 ## 5. 批判性思考与讨论 (Critical Thinking)
 - **局限性**：在大面积严重遮挡（>80%）时推理延迟大幅增加。
 - **未来方向**：轻量化掩码预测分支。
-```
 
 ---
 
